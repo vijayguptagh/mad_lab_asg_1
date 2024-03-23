@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:recase/recase.dart';
 
 void main() {
@@ -9,6 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'NotoSans',
+      ),
       home: HomePage(),
       debugShowCheckedModeBanner: false, // Remove debug banner
     );
@@ -32,9 +36,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ReCase Demo', style: TextStyle(fontFamily: 'Roboto')),
+        title: Text('ReCase Demo'),
         leading: IconButton(
-          icon: Icon(Icons.menu, semanticLabel: 'Menu',), // Hamburger menu icon
+          icon: Icon(Icons.menu), // Hamburger menu icon
           onPressed: () {
             // Handle menu action
           },
